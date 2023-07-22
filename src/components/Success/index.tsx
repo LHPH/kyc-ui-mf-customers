@@ -3,11 +3,9 @@
 import React from "react";
 
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import { Box, Button } from '@mui/material';
-import Alert from '@mui/material/Alert';
-import { ISuccess } from "@/interfaces/Success.interface";
+import { Box, Button, Alert, Typography, Grid } from '@mui/material';
+
+import { ISuccess } from "@/interfaces/successPage.interface";
 
 const Success = (props: ISuccess) => {
   return (

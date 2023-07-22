@@ -15,7 +15,7 @@ import AddressDataForm from '@/components/AddressDataFrom';
 import Review from '@/components/Review';
 import Success from '@/components/Success';
 import { Box } from '@mui/material';
-import { OperationType } from '@/components/enums/OperationType.enum';
+import { OperationType } from '@/components/enums/operationCustomerType.enum';
 
 const RegisterForm = () => {
 

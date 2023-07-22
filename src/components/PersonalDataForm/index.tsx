@@ -1,15 +1,10 @@
 "use client"
 
 import React from 'react'
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import { IPersonalDataForm } from '@/interfaces/PersonalData.interface';
+
+import {TextField, Stack, Box, Typography, Button} from '@mui/material';
+
+import { IPersonalDataForm } from '@/interfaces/personalDataForm.interface';
 
 const PersonalDataForm = (props: IPersonalDataForm) => {
 
@@ -26,6 +21,7 @@ const PersonalDataForm = (props: IPersonalDataForm) => {
             <TextField id="customer-second-name" label="Second Name" variant="outlined" />
             <TextField id="customer-last-name" label="Last Name" variant="outlined" />
             <TextField id="customer-last-second-name" label="Last Second Name" variant="outlined" />
+            <TextField id="customer-age" label="Age" variant="outlined"  inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}/>
             <TextField id="customer-mobile-phone" label="Mobile Phone" variant="outlined" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
             <TextField id="customer-email" label="Email" variant="outlined" />
         </Stack>

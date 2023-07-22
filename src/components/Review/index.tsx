@@ -2,12 +2,9 @@
 
 import React from 'react'
 
-import { Box, Button } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Divider from '@mui/material/Divider';
+import { Box, Button, Typography, Grid, Divider } from '@mui/material';
 
-import IReview from '@/interfaces/Review.interface';
+import IReview from '@/interfaces/reviewPage.interface';
 
 const Review = (props: IReview) => {
 
@@ -58,6 +55,12 @@ const Review = (props: IReview) => {
                 <Typography children="TEST" />
             </Grid>
             <Grid item xs={4}>
+                <Typography  variant="subtitle2" children="Age:" />
+            </Grid>
+            <Grid item xs={8}>
+                <Typography  children="20" />
+            </Grid>
+            <Grid item xs={4}>
                 <Typography  variant="subtitle2" children="Mobile Phone:" />
             </Grid>
             <Grid item xs={8}>
@@ -82,7 +85,7 @@ const Review = (props: IReview) => {
                 <Typography children="TEST" />
             </Grid>
             <Grid item xs={4}>
-                <Typography  variant="subtitle2" children="Street Num:" />
+                <Typography  variant="subtitle2" children="Street No.:" />
             </Grid>
             <Grid item xs={8}>
                 <Typography children="TEST" />

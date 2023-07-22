@@ -5,11 +5,8 @@ import { useState } from 'react';
 
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import { Box, Button, Divider, Grid, Stack, TextField } from '@mui/material';
-import SearchForm from '@/components/SearchForm';
+import SearchCustomerForm from '@/components/SearchCustomerForm';
+import CustomerListResult from '@/components/CustomerListResult';
 
 const SearchPage = () => {
 
@@ -17,7 +14,7 @@ const SearchPage = () => {
     const [activeStep, setActiveStep] = useState<number>(0);
 
     const handleBack = () => {
-        setActiveStep(activeStep+1);
+        setActiveStep(activeStep-1);
     }
 
     const handleNext = () => {
@@ -26,14 +23,28 @@ const SearchPage = () => {
     const getComponent = (steps: number) => {
 
         switch(steps){
+            case 0:
+                return <SearchCustomerForm handleBack={handleBack} handleNext={handleNext} />
+            case 1:
+                return <CustomerListResult handleBack={handleBack}/>
+        }
+    } 
+
+    const getContainerSize = (step: number) => {
+
+        switch(step){
+            case 0:
+                return "sm";
+            case 1:
+                return "md";
         }
     } 
 
   return (
     <>
-        <Container component="main" maxWidth="sm" sx={{mb: 4}}>
+        <Container component="main" maxWidth={getContainerSize(activeStep)} sx={{mb: 4}}>
             <Paper variant="outlined" sx={{my: {xs: 3, md: 6}, p: {xs: 2, md: 3}}}>
-                <SearchForm handleBack={handleBack} handleNext={handleNext} />
+                {getComponent(activeStep)}
             </Paper>
         </Container>
     </>

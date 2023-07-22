@@ -6,10 +6,10 @@ import { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import { Box, Button, Divider, Grid, Stack, TextField } from "@mui/material";
-import ISearchForm from "@/interfaces/SearchForm.interface";
+import { Box, Button, Grid, Stack, TextField } from "@mui/material";
+import ISearchForm from "@/interfaces/searchCustomerForm.interface";
 
-const SearchForm = (props: ISearchForm) => {
+const SearchCustomerForm = (props: ISearchForm) => {
 
   const [searchOption, setSearchOption] = useState<number>(0);
 
@@ -127,4 +127,4 @@ const SearchForm = (props: ISearchForm) => {
   );
 };
 
-export default SearchForm;
+export default SearchCustomerForm;

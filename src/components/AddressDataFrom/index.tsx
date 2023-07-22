@@ -4,7 +4,7 @@ import React from 'react'
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import { Box, Button, Typography } from '@mui/material';
-import { IAddressDataForm } from '@/interfaces/AddressData.interface';
+import { IAddressDataForm } from '@/interfaces/addressDataForm.interface';
 
 const AddressDataForm = (props: IAddressDataForm) => {
 
