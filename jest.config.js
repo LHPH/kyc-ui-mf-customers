@@ -13,7 +13,8 @@ const customJestConfig = {
     '**/*.{jsx,tsx,ts}',
     '!**/node_modules/**',
     '!**/vendor/**',
-    "!**/__tests__/**"
+    "!**/__tests__/**",
+    "!**/.next/**"
   ],
 }
 

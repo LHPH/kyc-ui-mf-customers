@@ -59,7 +59,7 @@ describe('SearchCustomerForm',()=>{
 
         fireEvent.click(listBox.getByRole('option',{name: /Full Name/i}));
 
-        const firstNameElement = screen.getByPlaceholderText(/Last Name/i);
+        const firstNameElement = screen.getByPlaceholderText(/First Name/i);
         const lastNameElement = screen.getByPlaceholderText(/Last Name/i);
         expect(firstNameElement).toBeInTheDocument();
         expect(lastNameElement).toBeInTheDocument();

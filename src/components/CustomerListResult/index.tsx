@@ -83,7 +83,7 @@ const CustomerListResult = (props: ICustomerListResult) => {
                                     }
                                 }
                             }}
-                            pageSizeOptions={[5]}
+                            pageSizeOptions={[10]}
                             disableRowSelectionOnClick
             />
         }
